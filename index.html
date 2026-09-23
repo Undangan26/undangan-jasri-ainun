@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan Royal - Jasri & Ainun</title>
+    <title>Undangan Pernikahan Adat Mandar - Jasri & Ainun</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
@@ -21,19 +21,23 @@
                 extend: {
                     colors: {
                         emerald: {
-                            950: '#02120E',
-                            900: '#05231B',
-                            800: '#0A382C',
-                            700: '#104D3E',
+                            950: '#02130F',
+                            900: '#06261E',
+                            800: '#0D3B2E',
+                            700: '#155241',
                         },
                         gold: {
-                            100: '#FFF8E7',
-                            200: '#F3E5AB',
-                            300: '#E6C687',
-                            400: '#DFB15B',
-                            500: '#D4AF37',
-                            600: '#AA882A',
-                            700: '#806318',
+                            100: '#FFF9E6',
+                            200: '#F5E6B3',
+                            300: '#E8CA75',
+                            400: '#DCAE42',
+                            500: '#C99723',
+                            600: '#A17516',
+                            700: '#7A550C',
+                        },
+                        ruby: {
+                            800: '#4A0815',
+                            900: '#2D030B',
                         }
                     },
                     fontFamily: {
@@ -41,6 +45,7 @@
                         sans: ['Montserrat', 'sans-serif'],
                         script: ['Great Vibes', 'cursive'],
                         cinzel: ['Cinzel', 'serif'],
+                        mandar: ['Playfair Display', 'serif'],
                     }
                 }
             }
@@ -50,8 +55,8 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #02120E;
-            color: #FFF8E7;
+            background-color: #02130F;
+            color: #FFF9E6;
             overflow-x: hidden;
             padding-bottom: 70px;
         }
@@ -60,17 +65,17 @@
             body { padding-bottom: 0; }
         }
 
-        /* GLASS CARD DENGAN KESAN MEWAH */
-        .royal-glass {
-            background: linear-gradient(135deg, rgba(10, 56, 44, 0.75) 0%, rgba(2, 18, 14, 0.85) 100%);
+        /* GLASS CARD DENGAN NATIVE FLORAL PATTERN */
+        .mandar-glass {
+            background: linear-gradient(135deg, rgba(13, 59, 46, 0.82) 0%, rgba(2, 19, 15, 0.90) 100%);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(232, 202, 117, 0.35);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(232, 202, 117, 0.1);
         }
 
         .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF8E7 0%, #F3E5AB 25%, #D4AF37 50%, #AA882A 75%, #FFF8E7 100%);
+            background: linear-gradient(135deg, #FFF9E6 0%, #F5E6B3 25%, #E8CA75 50%, #C99723 75%, #FFF9E6 100%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -81,47 +86,90 @@
             to { background-position: 200% center; }
         }
 
-        /* KONSEN GERBANG PKD IPDN */
+        /* GERBANG ADAT MANDAR MEMBUKA (3D OPENING EFFECT) */
         .gate-door-left {
-            transition: transform 2.2s cubic-bezier(0.7, 0, 0.1, 1);
+            transition: transform 2.5s cubic-bezier(0.77, 0, 0.175, 1);
             transform-origin: left center;
         }
 
         .gate-door-right {
-            transition: transform 2.2s cubic-bezier(0.7, 0, 0.1, 1);
+            transition: transform 2.5s cubic-bezier(0.77, 0, 0.175, 1);
             transform-origin: right center;
         }
 
         .gate-open-left {
-            transform: translateX(-100%) rotateY(-25deg);
+            transform: translateX(-100%) rotateY(-35deg);
         }
 
         .gate-open-right {
-            transform: translateX(100%) rotateY(25deg);
+            transform: translateX(100%) rotateY(35deg);
         }
 
-        .gate-texture {
-            background-color: #05231B;
+        .gate-texture-mandar {
+            background-color: #06261E;
             background-image: 
-                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
-                linear-gradient(0deg, rgba(2, 18, 14, 0.95) 0%, transparent 100%);
+                radial-gradient(circle at 50% 50%, rgba(232, 202, 117, 0.15) 0%, transparent 70%),
+                linear-gradient(180deg, rgba(2, 19, 15, 0.95) 0%, rgba(6, 38, 30, 0.8) 100%);
         }
 
-        .gold-border-glow {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        /* ORNAMEN FLORAL CORNER */
+        .floral-corner-tl {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            width: 48px;
+            height: 48px;
+            pointer-events: none;
+        }
+        .floral-corner-tr {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            width: 48px;
+            height: 48px;
+            transform: scaleX(-1);
+            pointer-events: none;
+        }
+        .floral-corner-bl {
+            position: absolute;
+            bottom: -12px;
+            left: -12px;
+            width: 48px;
+            height: 48px;
+            transform: scaleY(-1);
+            pointer-events: none;
+        }
+        .floral-corner-br {
+            position: absolute;
+            bottom: -12px;
+            right: -12px;
+            width: 48px;
+            height: 48px;
+            transform: scale(-1);
+            pointer-events: none;
         }
 
-        /* BINGKAI ROYAL MEMENTO */
-        .royal-frame {
+        /* BINGKAI FOTO ADAT MANDAR FLORAL */
+        .mandar-frame {
             position: relative;
-            padding: 8px;
-            background: linear-gradient(135deg, #D4AF37, #806318, #F3E5AB, #AA882A);
-            border-radius: 9999px 9999px 24px 24px;
+            padding: 10px;
+            background: linear-gradient(135deg, #E8CA75, #7A550C, #F5E6B3, #C99723);
+            border-radius: 120px 120px 24px 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(232, 202, 117, 0.25);
+        }
+
+        @keyframes float-flower {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(8deg); }
+        }
+
+        .flower-floating {
+            animation: float-flower 4s ease-in-out infinite;
         }
 
         @keyframes pulse-gold {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
-            50% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(232, 202, 117, 0.6); }
+            50% { box-shadow: 0 0 0 18px rgba(232, 202, 117, 0); }
         }
 
         .audio-pulse {
@@ -129,8 +177,8 @@
         }
 
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #02120E; }
-        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #02130F; }
+        ::-webkit-scrollbar-thumb { background: #E8CA75; border-radius: 4px; }
     </style>
 </head>
 <body class="relative antialiased selection:bg-gold-500 selection:text-emerald-950">
@@ -141,64 +189,73 @@
     </audio>
 
     <!-- Floating Music Toggle -->
-    <button id="music-control" onclick="toggleMusic()" aria-label="Toggle Music" class="fixed bottom-20 md:bottom-6 right-6 z-40 w-12 h-12 rounded-full royal-glass border border-gold-500 text-gold-300 flex items-center justify-center shadow-2xl transition-transform hover:scale-110 audio-pulse hidden">
+    <button id="music-control" onclick="toggleMusic()" aria-label="Toggle Music" class="fixed bottom-20 md:bottom-6 right-6 z-40 w-12 h-12 rounded-full mandar-glass border border-gold-500 text-gold-300 flex items-center justify-center shadow-2xl transition-transform hover:scale-110 audio-pulse hidden">
         <i id="music-icon" class="fas fa-compact-disc fa-spin text-xl"></i>
     </button>
 
-    <!-- COVER / EFEK GERBANG PKD IPDN OVERLAY -->
+    <!-- EFEK MEMBUKA GERBANG ADAT MANDAR & PKD IPDN OVERLAY -->
     <div id="gate-wrapper" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-emerald-950 perspective-1000">
         
-        <!-- Pancaran Sinar Mewah Saat Pintu Terbuka -->
-        <div id="light-beam" class="absolute inset-0 bg-radial from-gold-300/30 via-transparent to-transparent opacity-0 transition-opacity duration-1000 z-10 pointer-events-none"></div>
+        <!-- Cahaya Kilau Sinar Emas Saat Gerbang Terbuka -->
+        <div id="light-beam" class="absolute inset-0 bg-radial from-gold-300/40 via-gold-500/10 to-transparent opacity-0 transition-opacity duration-1000 z-10 pointer-events-none"></div>
+
+        <!-- Hiasan Bunga Melayang di Latar Depan Gerbang -->
+        <div class="absolute top-6 left-6 z-30 text-gold-400/40 text-4xl flower-floating"><i class="fas fa-spa"></i></div>
+        <div class="absolute bottom-10 right-10 z-30 text-gold-400/40 text-5xl flower-floating" style="animation-delay: 2s;"><i class="fas fa-seedling"></i></div>
 
         <!-- Pintu Gerbang Kiri -->
-        <div id="gate-left" class="gate-door-left gate-texture absolute top-0 left-0 w-1/2 h-full border-r-4 border-gold-500 flex items-center justify-end pr-3 md:pr-10 shadow-2xl z-20">
-            <!-- Pilar Ornamen Emas Kiri -->
-            <div class="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-emerald-950 via-emerald-800 to-emerald-950 border-r-2 border-gold-500/60 flex flex-col justify-between py-12 items-center">
-                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
-                <div class="w-1 h-3/4 bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"></div>
-                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
+        <div id="gate-left" class="gate-door-left gate-texture-mandar absolute top-0 left-0 w-1/2 h-full border-r-4 border-gold-500 flex items-center justify-end pr-2 md:pr-8 shadow-2xl z-20">
+            <!-- Pilar Ornamen Emas Khas Mandar -->
+            <div class="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-emerald-950 via-emerald-800 to-emerald-950 border-r-2 border-gold-500/60 flex flex-col justify-between py-10 items-center">
+                <i class="fas fa-fan text-gold-500/80 text-xs md:text-sm"></i>
+                <div class="w-1 h-3/4 bg-gradient-to-b from-transparent via-gold-500/50 to-transparent"></div>
+                <i class="fas fa-fan text-gold-500/80 text-xs md:text-sm"></i>
             </div>
-            <!-- Emblem PKD IPDN Kiri -->
-            <div class="text-right z-10 opacity-30 pr-2 md:pr-6">
+            <!-- Lambang PKD / Bunga Tradisional Mandar -->
+            <div class="text-right z-10 opacity-25 pr-2 md:pr-6">
                 <i class="fas fa-shield-halved text-7xl md:text-[160px] text-gold-400"></i>
             </div>
         </div>
 
         <!-- Pintu Gerbang Kanan -->
-        <div id="gate-right" class="gate-door-right gate-texture absolute top-0 right-0 w-1/2 h-full border-l-4 border-gold-500 flex items-center justify-start pl-3 md:pl-10 shadow-2xl z-20">
-            <!-- Pilar Ornamen Emas Kanan -->
-            <div class="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-l from-emerald-950 via-emerald-800 to-emerald-950 border-l-2 border-gold-500/60 flex flex-col justify-between py-12 items-center">
-                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
-                <div class="w-1 h-3/4 bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"></div>
-                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
+        <div id="gate-right" class="gate-door-right gate-texture-mandar absolute top-0 right-0 w-1/2 h-full border-l-4 border-gold-500 flex items-center justify-start pl-2 md:pl-8 shadow-2xl z-20">
+            <!-- Pilar Ornamen Emas Khas Mandar -->
+            <div class="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-l from-emerald-950 via-emerald-800 to-emerald-950 border-l-2 border-gold-500/60 flex flex-col justify-between py-10 items-center">
+                <i class="fas fa-fan text-gold-500/80 text-xs md:text-sm"></i>
+                <div class="w-1 h-3/4 bg-gradient-to-b from-transparent via-gold-500/50 to-transparent"></div>
+                <i class="fas fa-fan text-gold-500/80 text-xs md:text-sm"></i>
             </div>
-            <!-- Emblem PKD IPDN Kanan -->
-            <div class="text-left z-10 opacity-30 pl-2 md:pl-6">
+            <!-- Lambang Kedinasan IPDN / Floral -->
+            <div class="text-left z-10 opacity-25 pl-2 md:pl-6">
                 <i class="fas fa-award text-7xl md:text-[160px] text-gold-400"></i>
             </div>
         </div>
 
-        <!-- Kartu Sambutan Tengah -->
-        <div id="gate-content" class="relative z-30 text-center p-6 md:p-10 max-w-lg mx-auto royal-glass rounded-3xl m-4 border-2 border-gold-500 gold-border-glow transition-all duration-700">
-            <!-- Emblem Bintang Kedinasan -->
-            <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-tr from-gold-600 via-gold-200 to-gold-600 p-1 shadow-2xl">
+        <!-- KARTU SAMBUTAN GERBANG (BUNGA & ELEGAN MANDAR) -->
+        <div id="gate-content" class="relative z-30 text-center p-6 md:p-10 max-w-lg mx-auto mandar-glass rounded-3xl m-4 border-2 border-gold-500 transition-all duration-700 shadow-2xl">
+            <!-- SVG Ornamen Bunga Sudut -->
+            <svg class="floral-corner-tl" viewBox="0 0 100 100"><path d="M0,0 Q50,0 50,50 Q0,50 0,0" fill="#E8CA75" opacity="0.6"/></svg>
+            <svg class="floral-corner-tr" viewBox="0 0 100 100"><path d="M0,0 Q50,0 50,50 Q0,50 0,0" fill="#E8CA75" opacity="0.6"/></svg>
+
+            <!-- Crest Bintang & Bunga -->
+            <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-tr from-gold-600 via-gold-200 to-gold-600 p-1 shadow-2xl relative">
                 <div class="w-full h-full bg-emerald-950 rounded-full flex items-center justify-center border border-gold-500">
-                    <i class="fas fa-star text-gold-300 text-3xl animate-pulse"></i>
+                    <i class="fas fa-crown text-gold-300 text-3xl"></i>
                 </div>
+                <i class="fas fa-spa text-gold-400 absolute -bottom-1 -right-1 text-xl"></i>
             </div>
 
-            <p class="font-cinzel text-[10px] md:text-xs uppercase tracking-[0.35em] text-gold-300 font-bold mb-1">Purna Praja Digital Invitation</p>
+            <p class="font-cinzel text-[10px] md:text-xs uppercase tracking-[0.35em] text-gold-300 font-bold mb-1">Pemerintahan & Adat Mandar</p>
             <h1 class="font-script text-5xl md:text-7xl gold-gradient-text my-2">Jasri & Ainun</h1>
-            <p class="text-xs text-gold-100/90 font-serif italic mb-6 tracking-wider">"Purna Praja Dharma Satya Nagara Bhakti"</p>
+            <p class="text-xs text-gold-100/90 font-serif italic mb-6 tracking-wider">"Mallaqbiq Pa'mai, Maleqbiq Bunga Saqbe Mandar"</p>
             
-            <div class="my-5 p-4 rounded-2xl bg-emerald-950/80 border border-gold-500/40 shadow-inner">
+            <div class="my-5 p-4 rounded-2xl bg-emerald-950/90 border border-gold-500/40 shadow-inner">
                 <p class="text-[11px] text-gold-300/90 uppercase tracking-widest mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
                 <p id="guest-name" class="text-lg font-bold text-white tracking-wide font-cinzel">Tamu Undangan</p>
             </div>
 
             <button onclick="openGate()" class="mt-2 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600 text-emerald-950 font-cinzel font-extrabold text-xs tracking-widest shadow-2xl hover:brightness-125 transition duration-300 transform hover:scale-105">
-                <i class="fas fa-door-open text-base"></i> BUKA GERBANG PKD
+                <i class="fas fa-door-open text-base"></i> BUKA GERBANG ADAT
             </button>
         </div>
     </div>
@@ -206,55 +263,64 @@
     <!-- MAIN CONTENT CONTAINER -->
     <main id="main-content" class="min-h-screen opacity-0 transition-opacity duration-1000">
 
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION (TEMA BUNGA & MANDAR) -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center relative px-4 py-20 overflow-hidden">
+            <!-- Background Image dengan Overlay -->
             <div class="absolute inset-0 z-0">
-                <img src="foto1.jpg" alt="Wedding Background" class="w-full h-full object-cover opacity-20">
-                <div class="absolute inset-0 bg-gradient-to-b from-emerald-950 via-emerald-950/80 to-emerald-950"></div>
+                <img src="foto1.jpg" alt="Pernikahan Adat Mandar" class="w-full h-full object-cover opacity-20">
+                <div class="absolute inset-0 bg-gradient-to-b from-emerald-950 via-emerald-950/85 to-emerald-950"></div>
             </div>
 
+            <!-- Hiasan Bunga Khas Mandar Kiri & Kanan Upper -->
+            <div class="absolute top-10 left-4 text-gold-500/30 text-6xl md:text-8xl pointer-events-none font-serif"><i class="fas fa-leaf"></i></div>
+            <div class="absolute top-10 right-4 text-gold-500/30 text-6xl md:text-8xl pointer-events-none font-serif transform scale-x-[-1]"><i class="fas fa-leaf"></i></div>
+
             <div class="relative z-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
-                <div class="inline-block p-2 px-8 rounded-full royal-glass border border-gold-500/50 text-gold-300 text-xs tracking-[0.3em] font-cinzel uppercase mb-6 shadow-2xl">
-                    The Royal Wedding Of
+                <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full mandar-glass border border-gold-500/50 text-gold-300 text-xs tracking-[0.3em] font-cinzel uppercase mb-6 shadow-2xl">
+                    <i class="fas fa-spa text-gold-400"></i> Walimatul 'Ursy
                 </div>
                 <h1 class="font-script text-6xl md:text-9xl gold-gradient-text mb-4">Jasri & Ainun</h1>
-                <p class="font-serif italic text-xl md:text-3xl text-gold-100/90 mb-8 font-light tracking-wide">
+                <p class="font-mandar italic text-xl md:text-3xl text-gold-100/90 mb-8 font-light tracking-wide">
                     Minggu, 08 November 2026
                 </p>
 
-                <!-- REAL-TIME COUNTDOWN TIMER -->
+                <!-- REAL-TIME COUNTDOWN TIMER MEWAH -->
                 <div class="my-10" data-aos="fade-up" data-aos-delay="200">
                     <p class="font-cinzel text-xs uppercase tracking-[0.25em] text-gold-300/90 mb-4">Menghitung Hari Menuju Hari Bahagia</p>
                     <div class="grid grid-cols-4 gap-3 md:gap-6 max-w-md mx-auto">
-                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                        <div class="mandar-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
                             <span id="days" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
                             <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Hari</span>
                         </div>
-                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                        <div class="mandar-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
                             <span id="hours" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
                             <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Jam</span>
                         </div>
-                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                        <div class="mandar-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
                             <span id="minutes" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
                             <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Menit</span>
                         </div>
-                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                        <div class="mandar-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
                             <span id="seconds" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
                             <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Detik</span>
                         </div>
                     </div>
                 </div>
 
-                <a href="#mempelai" aria-label="Scroll Down" class="inline-block text-gold-300 text-sm animate-bounce mt-8">
+                <a href="#mempelai" aria-label="Scroll Down" class="inline-block text-gold-300 text-sm animate-bounce mt-6">
                     <i class="fas fa-chevron-down text-2xl"></i>
                 </a>
             </div>
         </section>
 
-        <!-- MEMPELAI SECTION -->
+        <!-- MEMPELAI SECTION (BUNGA & ELEGAN ADAT MANDAR) -->
         <section id="mempelai" class="py-24 px-4 relative z-10 max-w-5xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <i class="fas fa-crown text-gold-500/70 text-3xl mb-3"></i>
+                <div class="flex justify-center items-center gap-3 text-gold-500/80 text-2xl mb-2">
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-crown"></i>
+                    <i class="fas fa-spa"></i>
+                </div>
                 <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text mb-4">Pasangan Mempelai</h2>
                 <p class="text-sm text-gold-100/80 max-w-lg mx-auto italic font-serif leading-relaxed">
                     "Maha Suci Allah yang telah menciptakan pasangan-pasangan semuanya, baik dari apa yang ditumbuhkan oleh bumi dan dari diri mereka maupun dari apa yang tidak mereka ketahui."
@@ -262,9 +328,9 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10 items-center">
-                <!-- Groom -->
+                <!-- Mempelai Pria -->
                 <div class="text-center group" data-aos="fade-right">
-                    <div class="royal-frame w-60 h-80 mx-auto mb-6 shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                    <div class="mandar-frame w-64 h-80 mx-auto mb-6 transition-transform duration-500 group-hover:scale-105">
                         <div class="w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-emerald-950">
                             <img src="pria.jpg" alt="Jasri Yusuf" class="w-full h-full object-cover">
                         </div>
@@ -274,9 +340,9 @@
                     <p class="text-sm text-gold-100/80">Putra dari Bapak Yusuf & Ibu Siti</p>
                 </div>
 
-                <!-- Bride -->
+                <!-- Mempelai Wanita -->
                 <div class="text-center group" data-aos="fade-left">
-                    <div class="royal-frame w-60 h-80 mx-auto mb-6 shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                    <div class="mandar-frame w-64 h-80 mx-auto mb-6 transition-transform duration-500 group-hover:scale-105">
                         <div class="w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-emerald-950">
                             <img src="wanita.jpg" alt="Ainun Wafiyah Ashar" class="w-full h-full object-cover">
                         </div>
@@ -296,7 +362,10 @@
                     <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text">Agenda Resepsi</h2>
                 </div>
 
-                <div class="max-w-2xl mx-auto royal-glass rounded-3xl p-8 md:p-12 border border-gold-500/50 shadow-2xl relative" data-aos="zoom-in">
+                <div class="max-w-2xl mx-auto mandar-glass rounded-3xl p-8 md:p-12 border border-gold-500/50 shadow-2xl relative" data-aos="zoom-in">
+                    <svg class="floral-corner-tl" viewBox="0 0 100 100"><path d="M0,0 Q50,0 50,50 Q0,50 0,0" fill="#E8CA75" opacity="0.5"/></svg>
+                    <svg class="floral-corner-br" viewBox="0 0 100 100"><path d="M0,0 Q50,0 50,50 Q0,50 0,0" fill="#E8CA75" opacity="0.5"/></svg>
+
                     <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600 text-emerald-950 px-8 py-2.5 rounded-full font-cinzel font-bold text-xs tracking-widest shadow-xl flex items-center gap-2">
                         <i class="fas fa-glass-cheers"></i> RESEPSI PERNIKAHAN
                     </div>
@@ -340,8 +409,8 @@
                 <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text">Galeri Prewedding</h2>
             </div>
 
-            <!-- Video Player (HTML5 Video) -->
-            <div class="mb-12 royal-glass rounded-3xl p-4 md:p-6 border border-gold-500/50 max-w-3xl mx-auto shadow-2xl" data-aos="zoom-in">
+            <!-- Video Player sinematik -->
+            <div class="mb-12 mandar-glass rounded-3xl p-4 md:p-6 border border-gold-500/50 max-w-3xl mx-auto shadow-2xl" data-aos="zoom-in">
                 <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-gold-500/40 bg-black flex items-center justify-center">
                     <video class="w-full h-full object-cover" controls preload="metadata">
                         <source src="video-wedding.mp4" type="video/mp4">
@@ -353,17 +422,17 @@
 
             <!-- Photo Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="royal-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up">
+                <div class="mandar-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up">
                     <div class="w-full h-full rounded-xl overflow-hidden">
                         <img src="foto1.jpg" alt="Momen 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                 </div>
-                <div class="royal-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="mandar-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-full h-full rounded-xl overflow-hidden">
                         <img src="wanita.jpg" alt="Momen 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                 </div>
-                <div class="royal-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="mandar-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-full h-full rounded-xl overflow-hidden">
                         <img src="pria.jpg" alt="Momen 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
@@ -383,7 +452,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="zoom-in">
-                    <div class="royal-glass p-6 rounded-2xl border border-gold-500/40 relative">
+                    <div class="mandar-glass p-6 rounded-2xl border border-gold-500/40 relative">
                         <div class="flex justify-between items-center mb-4">
                             <span class="font-bold text-lg text-gold-300 font-cinzel">Bank BRI</span>
                             <i class="fas fa-university text-gold-500 text-xl"></i>
@@ -396,7 +465,7 @@
                         </button>
                     </div>
 
-                    <div class="royal-glass p-6 rounded-2xl border border-gold-500/40 relative">
+                    <div class="mandar-glass p-6 rounded-2xl border border-gold-500/40 relative">
                         <div class="flex justify-between items-center mb-4">
                             <span class="font-bold text-lg text-gold-300 font-cinzel">Bank BCA</span>
                             <i class="fas fa-university text-gold-500 text-xl"></i>
@@ -420,7 +489,7 @@
                 <p class="text-sm text-gold-100/70">Berikan ucapan terbaik Anda untuk kedua mempelai</p>
             </div>
 
-            <div class="royal-glass p-6 md:p-8 rounded-3xl border border-gold-500/40 shadow-2xl mb-10" data-aos="fade-up">
+            <div class="mandar-glass p-6 md:p-8 rounded-3xl border border-gold-500/40 shadow-2xl mb-10" data-aos="fade-up">
                 <form id="rsvp-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
                     <div>
                         <label for="form-name" class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Nama Anda</label>
@@ -451,13 +520,13 @@
         <footer class="py-12 px-4 text-center border-t border-gold-500/20 relative z-10 bg-emerald-950">
             <h3 class="font-script text-4xl gold-gradient-text mb-2">Jasri & Ainun</h3>
             <p class="text-xs text-gold-100/60 mb-6">Terima Kasih Atas Doa & Restu Anda</p>
-            <p class="text-[10px] text-gold-300/40 font-cinzel">Digital Wedding Invitation &copy; 2026. All Rights Reserved.</p>
+            <p class="text-[10px] text-gold-300/40 font-cinzel">Digital Mandar Wedding Invitation &copy; 2026. All Rights Reserved.</p>
         </footer>
 
     </main>
 
     <!-- MOBILE BOTTOM NAVIGATION -->
-    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 royal-glass border-t border-gold-500/40 px-4 py-2.5 flex justify-around items-center text-gold-300">
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 mandar-glass border-t border-gold-500/40 px-4 py-2.5 flex justify-around items-center text-gold-300">
         <a href="#home" class="flex flex-col items-center gap-1 text-[10px]"><i class="fas fa-home text-base"></i><span>Home</span></a>
         <a href="#mempelai" class="flex flex-col items-center gap-1 text-[10px]"><i class="fas fa-user-friends text-base"></i><span>Mempelai</span></a>
         <a href="#acara" class="flex flex-col items-center gap-1 text-[10px]"><i class="fas fa-calendar-alt text-base"></i><span>Acara</span></a>
@@ -467,7 +536,7 @@
     </nav>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed top-6 right-6 z-50 royal-glass border border-gold-500 text-gold-300 px-6 py-3 rounded-2xl shadow-2xl hidden transition duration-300 flex items-center gap-3">
+    <div id="toast" class="fixed top-6 right-6 z-50 mandar-glass border border-gold-500 text-gold-300 px-6 py-3 rounded-2xl shadow-2xl hidden transition duration-300 flex items-center gap-3">
         <i class="fas fa-check-circle text-gold-500 text-lg"></i>
         <span id="toast-message" class="text-xs font-medium">Nomor rekening berhasil disalin!</span>
     </div>
@@ -484,7 +553,7 @@
             document.getElementById('guest-name').innerText = guestName;
         }
 
-        // AKSI MEMBUKA GERBANG PKD IPDN MEWAH
+        // FUNGSI MEMBUKA GERBANG ADAT MANDAR MEWAH
         function openGate() {
             const gateLeft = document.getElementById('gate-left');
             const gateRight = document.getElementById('gate-right');
@@ -494,14 +563,14 @@
             const mainContent = document.getElementById('main-content');
             const musicBtn = document.getElementById('music-control');
 
-            // 1. Pendaran Sinar Cahaya
+            // 1. Pancaran Cahaya Emas
             lightBeam.classList.remove('opacity-0');
             lightBeam.classList.add('opacity-100');
 
-            // 2. Hilangkan Kartu Sambutan
+            // 2. Kartu Sambutan Menghilang
             gateContent.classList.add('scale-75', 'opacity-0');
 
-            // 3. Buka Pintu Gerbang Kiri & Kanan (Efek 3D)
+            // 3. Efek Membuka Pintu Gerbang Kiri & Kanan
             setTimeout(() => {
                 gateLeft.classList.add('gate-open-left');
                 gateRight.classList.add('gate-open-right');
@@ -514,7 +583,7 @@
             setTimeout(() => {
                 gateWrapper.style.display = 'none';
                 AOS.refresh();
-            }, 2200);
+            }, 2500);
         }
 
         const audio = document.getElementById('bg-music');
@@ -612,7 +681,7 @@
                     : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
 
                 const card = document.createElement('div');
-                card.className = 'royal-glass p-4 rounded-2xl border border-gold-500/30 text-left space-y-2';
+                card.className = 'mandar-glass p-4 rounded-2xl border border-gold-500/30 text-left space-y-2';
                 card.innerHTML = `
                     <div class="flex justify-between items-center">
                         <h4 class="font-bold text-gold-300 text-sm font-cinzel">${escapeHtml(item.name)}</h4>
