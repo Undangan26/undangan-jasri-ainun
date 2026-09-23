@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Jasri & Ainun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a1128;
+      --navy-royal: #1c2541;
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --text-light: #f8f9fa;
+      --text-muted: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile-wrapper {
+      width: 100%;
+      max-width: 480px;
+      background: var(--navy-royal);
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Decorative IPDN Border Pattern */
+    .border-gold {
+      border: 2px solid var(--gold-primary);
+      margin: 15px;
+      padding: 20px 10px;
+      position: relative;
+    }
+
+    /* Header & Crest */
+    .header {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .crest {
+      width: 80px;
+      height: auto;
+      filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+      margin-bottom: 10px;
+    }
+
+    .military-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .sub-title {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* Names Section */
+    .couple-names {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .name-groom, .name-bride {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .degree {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .ampersand {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: var(--gold-light);
+      margin: 5px 0;
+    }
+
+    /* Video & Photo Gallery */
+    .media-section {
+      margin: 25px 0;
+    }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      text-align: center;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .video-container {
+      width: 100%;
+      height: 220px;
+      background: #000;
+      border: 1px solid var(--gold-primary);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    /* Event Details */
+    .event-card {
+      background: rgba(10, 17, 40, 0.6);
+      border: 1px solid var(--gold-primary);
+      border-radius: 8px;
+      padding: 20px 15px;
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .event-type {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      padding-bottom: 8px;
+    }
+
+    .detail-item {
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+    }
+
+    .detail-item strong {
+      color: var(--gold-primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Button */
+    .btn-location {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #d4af37, #aa820a);
+      color: #000;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-decoration: none;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-wrapper">
+  <div class="border-gold">
+    
+    <!-- Header IPDN -->
+    <div class="header">
+      <svg class="crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="2"/>
+        <path d="M50 15 L60 35 L82 35 L64 48 L71 70 L50 56 L29 70 L36 48 L18 35 L40 35 Z" fill="#D4AF37"/>
+      </svg>
+      <div class="military-title">Purna Praja IPDN</div>
+      <div class="sub-title">Undangan Pernikahan</div>
+    </div>
+
+    <!-- Mempelaian -->
+    <div class="couple-names">
+      <div class="name-groom">
+        Jasri Yusuf
+        <span class="degree">S.Tr.IP</span>
+      </div>
+      
+      <div class="ampersand">&</div>
+      
+      <div class="name-bride">
+        Ainun Wafiyah Ashar
+        <span class="degree">S.Tr.IP, M.Si</span>
+      </div>
+    </div>
+
+    <!-- Video Preview / Prewedding -->
+    <div class="media-section">
+      <div class="section-label">Video Prewedding</div>
+      <div class="video-container">
+        <video controls poster="https://via.placeholder.com/480x220/1c2541/d4af37?text=Preview+Video">
+          <source src="video-prewedding.mp4" type="video/mp4">
+          Browser Anda tidak mendukung tag video.
+        </video>
+      </div>
+    </div>
+
+    <!-- Galeri Foto -->
+    <div class="media-section">
+      <div class="section-label">Galeri Foto</div>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/300x300/1c2541/d4af37?text=Foto+1" alt="Foto Prewedding 1">
+        <img src="https://via.placeholder.com/300x300/1c2541/d4af37?text=Foto+2" alt="Foto Prewedding 2">
+        <img src="https://via.placeholder.com/300x300/1c2541/d4af37?text=Foto+3" alt="Foto Purna+Praja">
+        <img src="https://via.placeholder.com/300x300/1c2541/d4af37?text=Foto+4" alt="Foto Bersama">
+      </div>
+    </div>
+
+    <!-- Waktu & Lokasi -->
+    <div class="event-card">
+      <div class="event-type">Resepsi Pernikahan</div>
+      
+      <div class="detail-item">
+        <strong>Hari & Tanggal</strong>
+        🗓️ Minggu, 08 November 2026
+      </div>
+      
+      <div class="detail-item">
+        <strong>Waktu</strong>
+        🕐 13.30 WITA s.d Selesai
+      </div>
+      
+      <div class="detail-item">
+        <strong>Lokasi Acara</strong>
+        📍 Kediaman (RUMAH)<br>
+        Jl. Labora Lingkungan Teppo
+      </div>
+
+      <a href="https://maps.google.com" target="_blank" class="btn-location">Petunjuk Lokasi Google Maps</a>
+    </div>
+
+    <div class="footer">
+      Kehormatan & Kebahagiaan Bagi Kami Atas Kehadiran Bapak/Ibu/Saudara/i
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
