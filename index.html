@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan - Jasri & Ainun</title>
+    <title>Undangan Pernikahan Royal - Jasri & Ainun</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
@@ -21,22 +21,26 @@
                 extend: {
                     colors: {
                         emerald: {
-                            950: '#031712',
-                            900: '#062C22',
-                            800: '#0B4134',
-                            700: '#125947',
+                            950: '#02120E',
+                            900: '#05231B',
+                            800: '#0A382C',
+                            700: '#104D3E',
                         },
                         gold: {
-                            100: '#FDF8EC',
+                            100: '#FFF8E7',
+                            200: '#F3E5AB',
                             300: '#E6C687',
+                            400: '#DFB15B',
                             500: '#D4AF37',
                             600: '#AA882A',
+                            700: '#806318',
                         }
                     },
                     fontFamily: {
                         serif: ['Cormorant Garamond', 'serif'],
                         sans: ['Montserrat', 'sans-serif'],
                         script: ['Great Vibes', 'cursive'],
+                        cinzel: ['Cinzel', 'serif'],
                     }
                 }
             }
@@ -46,8 +50,8 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #062C22;
-            color: #FDF8EC;
+            background-color: #02120E;
+            color: #FFF8E7;
             overflow-x: hidden;
             padding-bottom: 70px;
         }
@@ -56,42 +60,63 @@
             body { padding-bottom: 0; }
         }
 
-        .glass {
-            background: rgba(11, 65, 52, 0.55);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+        /* GLASS CARD DENGAN KESAN MEWAH */
+        .royal-glass {
+            background: linear-gradient(135deg, rgba(10, 56, 44, 0.75) 0%, rgba(2, 18, 14, 0.85) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.15);
         }
 
         .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF1B0 0%, #D4AF37 50%, #9A7B1C 100%);
+            background: linear-gradient(135deg, #FFF8E7 0%, #F3E5AB 25%, #D4AF37 50%, #AA882A 75%, #FFF8E7 100%);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
         }
 
-        /* EFEK PINTU GERBANG PKD IPDN */
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* KONSEN GERBANG PKD IPDN */
         .gate-door-left {
-            transition: transform 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: transform 2.2s cubic-bezier(0.7, 0, 0.1, 1);
             transform-origin: left center;
         }
 
         .gate-door-right {
-            transition: transform 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: transform 2.2s cubic-bezier(0.7, 0, 0.1, 1);
             transform-origin: right center;
         }
 
         .gate-open-left {
-            transform: translateX(-100%) rotateY(-20deg);
+            transform: translateX(-100%) rotateY(-25deg);
         }
 
         .gate-open-right {
-            transform: translateX(100%) rotateY(20deg);
+            transform: translateX(100%) rotateY(25deg);
         }
 
-        /* ORNAMEN GERBANG */
-        .gate-pillar {
-            background: linear-gradient(180deg, #0B4134 0%, #031712 100%);
-            border-color: #D4AF37;
+        .gate-texture {
+            background-color: #05231B;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+                linear-gradient(0deg, rgba(2, 18, 14, 0.95) 0%, transparent 100%);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* BINGKAI ROYAL MEMENTO */
+        .royal-frame {
+            position: relative;
+            padding: 8px;
+            background: linear-gradient(135deg, #D4AF37, #806318, #F3E5AB, #AA882A);
+            border-radius: 9999px 9999px 24px 24px;
         }
 
         @keyframes pulse-gold {
@@ -104,11 +129,11 @@
         }
 
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #062C22; }
+        ::-webkit-scrollbar-track { background: #02120E; }
         ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
     </style>
 </head>
-<body class="relative antialiased selection:bg-gold-500 selection:text-emerald-900">
+<body class="relative antialiased selection:bg-gold-500 selection:text-emerald-950">
 
     <!-- Audio Background -->
     <audio id="bg-music" loop preload="auto">
@@ -116,55 +141,64 @@
     </audio>
 
     <!-- Floating Music Toggle -->
-    <button id="music-control" onclick="toggleMusic()" aria-label="Toggle Music" class="fixed bottom-20 md:bottom-6 right-6 z-40 w-12 h-12 rounded-full glass border border-gold-500 text-gold-300 flex items-center justify-center shadow-2xl transition-transform hover:scale-110 audio-pulse hidden">
+    <button id="music-control" onclick="toggleMusic()" aria-label="Toggle Music" class="fixed bottom-20 md:bottom-6 right-6 z-40 w-12 h-12 rounded-full royal-glass border border-gold-500 text-gold-300 flex items-center justify-center shadow-2xl transition-transform hover:scale-110 audio-pulse hidden">
         <i id="music-icon" class="fas fa-compact-disc fa-spin text-xl"></i>
     </button>
 
     <!-- COVER / EFEK GERBANG PKD IPDN OVERLAY -->
-    <div id="gate-wrapper" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-emerald-950">
+    <div id="gate-wrapper" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-emerald-950 perspective-1000">
         
+        <!-- Pancaran Sinar Mewah Saat Pintu Terbuka -->
+        <div id="light-beam" class="absolute inset-0 bg-radial from-gold-300/30 via-transparent to-transparent opacity-0 transition-opacity duration-1000 z-10 pointer-events-none"></div>
+
         <!-- Pintu Gerbang Kiri -->
-        <div id="gate-left" class="gate-door-left absolute top-0 left-0 w-1/2 h-full bg-emerald-900 border-r-4 border-gold-500/80 flex items-center justify-end pr-4 md:pr-12 shadow-2xl z-20">
-            <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:20px_20px]"></div>
-            <!-- Pillar Decor -->
-            <div class="hidden sm:block absolute left-4 top-0 bottom-0 w-12 gate-pillar border-r border-gold-500/30"></div>
-            <!-- Lambang Kedinasan/Pamong Left -->
-            <div class="text-right z-10 opacity-40 pr-2">
-                <i class="fas fa-shield-alt text-7xl md:text-9xl text-gold-500"></i>
+        <div id="gate-left" class="gate-door-left gate-texture absolute top-0 left-0 w-1/2 h-full border-r-4 border-gold-500 flex items-center justify-end pr-3 md:pr-10 shadow-2xl z-20">
+            <!-- Pilar Ornamen Emas Kiri -->
+            <div class="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-emerald-950 via-emerald-800 to-emerald-950 border-r-2 border-gold-500/60 flex flex-col justify-between py-12 items-center">
+                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
+                <div class="w-1 h-3/4 bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"></div>
+                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
+            </div>
+            <!-- Emblem PKD IPDN Kiri -->
+            <div class="text-right z-10 opacity-30 pr-2 md:pr-6">
+                <i class="fas fa-shield-halved text-7xl md:text-[160px] text-gold-400"></i>
             </div>
         </div>
 
         <!-- Pintu Gerbang Kanan -->
-        <div id="gate-right" class="gate-door-right absolute top-0 right-0 w-1/2 h-full bg-emerald-900 border-l-4 border-gold-500/80 flex items-center justify-start pl-4 md:pl-12 shadow-2xl z-20">
-            <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:20px_20px]"></div>
-            <!-- Pillar Decor -->
-            <div class="hidden sm:block absolute right-4 top-0 bottom-0 w-12 gate-pillar border-l border-gold-500/30"></div>
-            <!-- Lambang Kedinasan/Pamong Right -->
-            <div class="text-left z-10 opacity-40 pl-2">
-                <i class="fas fa-crown text-7xl md:text-9xl text-gold-500"></i>
+        <div id="gate-right" class="gate-door-right gate-texture absolute top-0 right-0 w-1/2 h-full border-l-4 border-gold-500 flex items-center justify-start pl-3 md:pl-10 shadow-2xl z-20">
+            <!-- Pilar Ornamen Emas Kanan -->
+            <div class="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-l from-emerald-950 via-emerald-800 to-emerald-950 border-l-2 border-gold-500/60 flex flex-col justify-between py-12 items-center">
+                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
+                <div class="w-1 h-3/4 bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"></div>
+                <i class="fas fa-crown text-gold-500/70 text-xs md:text-sm"></i>
+            </div>
+            <!-- Emblem PKD IPDN Kanan -->
+            <div class="text-left z-10 opacity-30 pl-2 md:pl-6">
+                <i class="fas fa-award text-7xl md:text-[160px] text-gold-400"></i>
             </div>
         </div>
 
-        <!-- Konten Pembuka di Tengah Gerbang -->
-        <div id="gate-content" class="relative z-30 text-center p-6 md:p-8 max-w-lg mx-auto glass rounded-3xl m-4 border-2 border-gold-500 shadow-2xl transition-all duration-700">
-            <!-- Embel-embel PKD -->
-            <div class="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-tr from-gold-600 via-gold-300 to-gold-600 p-0.5 shadow-xl">
-                <div class="w-full h-full bg-emerald-900 rounded-full flex items-center justify-center border border-gold-500">
+        <!-- Kartu Sambutan Tengah -->
+        <div id="gate-content" class="relative z-30 text-center p-6 md:p-10 max-w-lg mx-auto royal-glass rounded-3xl m-4 border-2 border-gold-500 gold-border-glow transition-all duration-700">
+            <!-- Emblem Bintang Kedinasan -->
+            <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-tr from-gold-600 via-gold-200 to-gold-600 p-1 shadow-2xl">
+                <div class="w-full h-full bg-emerald-950 rounded-full flex items-center justify-center border border-gold-500">
                     <i class="fas fa-star text-gold-300 text-3xl animate-pulse"></i>
                 </div>
             </div>
 
-            <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-300 font-semibold mb-1">Purna Praja Digital Invitation</p>
-            <h1 class="font-script text-5xl md:text-6xl gold-gradient-text mb-2">Jasri & Ainun</h1>
-            <p class="text-xs text-gold-100/80 font-serif italic mb-6">"Purna Praja Dharma Satya Nagara Bhakti"</p>
+            <p class="font-cinzel text-[10px] md:text-xs uppercase tracking-[0.35em] text-gold-300 font-bold mb-1">Purna Praja Digital Invitation</p>
+            <h1 class="font-script text-5xl md:text-7xl gold-gradient-text my-2">Jasri & Ainun</h1>
+            <p class="text-xs text-gold-100/90 font-serif italic mb-6 tracking-wider">"Purna Praja Dharma Satya Nagara Bhakti"</p>
             
-            <div class="my-4 p-4 rounded-2xl bg-emerald-950/70 border border-gold-500/40">
-                <p class="text-[11px] text-gold-300/80 mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-                <p id="guest-name" class="text-lg font-bold text-white tracking-wide">Tamu Undangan</p>
+            <div class="my-5 p-4 rounded-2xl bg-emerald-950/80 border border-gold-500/40 shadow-inner">
+                <p class="text-[11px] text-gold-300/90 uppercase tracking-widest mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <p id="guest-name" class="text-lg font-bold text-white tracking-wide font-cinzel">Tamu Undangan</p>
             </div>
 
-            <button onclick="openGate()" class="mt-2 inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-emerald-900 font-bold shadow-2xl hover:brightness-125 transition duration-300 transform hover:scale-105">
-                <i class="fas fa-door-open text-lg"></i> BUKA GERBANG PKD
+            <button onclick="openGate()" class="mt-2 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600 text-emerald-950 font-cinzel font-extrabold text-xs tracking-widest shadow-2xl hover:brightness-125 transition duration-300 transform hover:scale-105">
+                <i class="fas fa-door-open text-base"></i> BUKA GERBANG PKD
             </button>
         </div>
     </div>
@@ -175,92 +209,96 @@
         <!-- HERO SECTION -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center relative px-4 py-20 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="foto1.jpg" alt="Wedding Background" class="w-full h-full object-cover opacity-25">
-                <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/90 via-emerald-900/80 to-emerald-950"></div>
+                <img src="foto1.jpg" alt="Wedding Background" class="w-full h-full object-cover opacity-20">
+                <div class="absolute inset-0 bg-gradient-to-b from-emerald-950 via-emerald-950/80 to-emerald-950"></div>
             </div>
 
             <div class="relative z-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
-                <div class="inline-block p-2 px-6 rounded-full glass border border-gold-500/40 text-gold-300 text-xs tracking-widest uppercase mb-6 shadow-xl">
-                    The Wedding Of
+                <div class="inline-block p-2 px-8 rounded-full royal-glass border border-gold-500/50 text-gold-300 text-xs tracking-[0.3em] font-cinzel uppercase mb-6 shadow-2xl">
+                    The Royal Wedding Of
                 </div>
-                <h1 class="font-script text-6xl md:text-8xl gold-gradient-text mb-4">Jasri & Ainun</h1>
-                <p class="font-serif italic text-xl md:text-2xl text-gold-100/90 mb-8 font-light">
+                <h1 class="font-script text-6xl md:text-9xl gold-gradient-text mb-4">Jasri & Ainun</h1>
+                <p class="font-serif italic text-xl md:text-3xl text-gold-100/90 mb-8 font-light tracking-wide">
                     Minggu, 08 November 2026
                 </p>
 
                 <!-- REAL-TIME COUNTDOWN TIMER -->
-                <div class="my-8" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-xs uppercase tracking-widest text-gold-300/80 mb-4">Menghitung Hari Menuju Hari Bahagia</p>
+                <div class="my-10" data-aos="fade-up" data-aos-delay="200">
+                    <p class="font-cinzel text-xs uppercase tracking-[0.25em] text-gold-300/90 mb-4">Menghitung Hari Menuju Hari Bahagia</p>
                     <div class="grid grid-cols-4 gap-3 md:gap-6 max-w-md mx-auto">
-                        <div class="glass p-3 md:p-4 rounded-2xl border border-gold-500/30">
-                            <span id="days" class="block font-serif text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
-                            <span class="text-[10px] md:text-xs text-gold-200/70 uppercase tracking-wider">Hari</span>
+                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                            <span id="days" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
+                            <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Hari</span>
                         </div>
-                        <div class="glass p-3 md:p-4 rounded-2xl border border-gold-500/30">
-                            <span id="hours" class="block font-serif text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
-                            <span class="text-[10px] md:text-xs text-gold-200/70 uppercase tracking-wider">Jam</span>
+                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                            <span id="hours" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
+                            <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Jam</span>
                         </div>
-                        <div class="glass p-3 md:p-4 rounded-2xl border border-gold-500/30">
-                            <span id="minutes" class="block font-serif text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
-                            <span class="text-[10px] md:text-xs text-gold-200/70 uppercase tracking-wider">Menit</span>
+                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                            <span id="minutes" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
+                            <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Menit</span>
                         </div>
-                        <div class="glass p-3 md:p-4 rounded-2xl border border-gold-500/30">
-                            <span id="seconds" class="block font-serif text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
-                            <span class="text-[10px] md:text-xs text-gold-200/70 uppercase tracking-wider">Detik</span>
+                        <div class="royal-glass p-3 md:p-5 rounded-2xl border border-gold-500/40">
+                            <span id="seconds" class="block font-cinzel text-2xl md:text-4xl font-bold gold-gradient-text">00</span>
+                            <span class="text-[9px] md:text-xs text-gold-200/80 uppercase tracking-widest font-sans">Detik</span>
                         </div>
                     </div>
                 </div>
 
-                <a href="#mempelai" aria-label="Scroll Down" class="inline-block text-gold-300 text-sm animate-bounce mt-6">
+                <a href="#mempelai" aria-label="Scroll Down" class="inline-block text-gold-300 text-sm animate-bounce mt-8">
                     <i class="fas fa-chevron-down text-2xl"></i>
                 </a>
             </div>
         </section>
 
         <!-- MEMPELAI SECTION -->
-        <section id="mempelai" class="py-20 px-4 relative z-10 max-w-5xl mx-auto">
+        <section id="mempelai" class="py-24 px-4 relative z-10 max-w-5xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <i class="fas fa-leaf text-gold-500/60 text-3xl mb-3"></i>
+                <i class="fas fa-crown text-gold-500/70 text-3xl mb-3"></i>
                 <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text mb-4">Pasangan Mempelai</h2>
-                <p class="text-sm text-gold-100/70 max-w-lg mx-auto italic font-serif">
+                <p class="text-sm text-gold-100/80 max-w-lg mx-auto italic font-serif leading-relaxed">
                     "Maha Suci Allah yang telah menciptakan pasangan-pasangan semuanya, baik dari apa yang ditumbuhkan oleh bumi dan dari diri mereka maupun dari apa yang tidak mereka ketahui."
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10 items-center">
                 <!-- Groom -->
                 <div class="text-center group" data-aos="fade-right">
-                    <div class="relative w-56 h-72 mx-auto mb-6 rounded-t-full rounded-b-3xl overflow-hidden border-2 border-gold-500/50 p-2 glass transition-transform duration-500 group-hover:scale-105 shadow-2xl">
-                        <img src="pria.jpg" alt="Jasri Yusuf" class="w-full h-full object-cover rounded-t-full rounded-b-2xl">
+                    <div class="royal-frame w-60 h-80 mx-auto mb-6 shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                        <div class="w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-emerald-950">
+                            <img src="pria.jpg" alt="Jasri Yusuf" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h3 class="font-serif text-2xl md:text-3xl font-bold text-gold-300 mb-2">Jasri Yusuf, S.Tr.IP</h3>
-                    <p class="text-xs text-gold-100/70 tracking-wider uppercase mb-3 font-semibold">Mempelai Pria</p>
+                    <p class="font-cinzel text-xs text-gold-100/80 tracking-widest uppercase mb-3 font-semibold">Mempelai Pria</p>
                     <p class="text-sm text-gold-100/80">Putra dari Bapak Yusuf & Ibu Siti</p>
                 </div>
 
                 <!-- Bride -->
                 <div class="text-center group" data-aos="fade-left">
-                    <div class="relative w-56 h-72 mx-auto mb-6 rounded-t-full rounded-b-3xl overflow-hidden border-2 border-gold-500/50 p-2 glass transition-transform duration-500 group-hover:scale-105 shadow-2xl">
-                        <img src="wanita.jpg" alt="Ainun Wafiyah Ashar" class="w-full h-full object-cover rounded-t-full rounded-b-2xl">
+                    <div class="royal-frame w-60 h-80 mx-auto mb-6 shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                        <div class="w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-emerald-950">
+                            <img src="wanita.jpg" alt="Ainun Wafiyah Ashar" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <h3 class="font-serif text-2xl md:text-3xl font-bold text-gold-300 mb-2">Ainun Wafiyah Ashar, S.Tr.IP, M.Si</h3>
-                    <p class="text-xs text-gold-100/70 tracking-wider uppercase mb-3 font-semibold">Mempelai Wanita</p>
+                    <p class="font-cinzel text-xs text-gold-100/80 tracking-widest uppercase mb-3 font-semibold">Mempelai Wanita</p>
                     <p class="text-sm text-gold-100/80">Putri dari Bapak Ashar & Ibu Rahmah</p>
                 </div>
             </div>
         </section>
 
         <!-- DETAIL ACARA SECTION -->
-        <section id="acara" class="py-20 px-4 relative z-10 bg-emerald-950/60 border-y border-gold-500/20">
+        <section id="acara" class="py-24 px-4 relative z-10 bg-emerald-950/80 border-y border-gold-500/30">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <p class="text-xs uppercase tracking-widest text-gold-300 mb-2">Waktu & Tempat</p>
+                    <p class="font-cinzel text-xs uppercase tracking-widest text-gold-300 mb-2">Waktu & Tempat</p>
                     <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text">Agenda Resepsi</h2>
                 </div>
 
-                <div class="max-w-2xl mx-auto glass rounded-3xl p-8 md:p-12 border border-gold-500/40 shadow-2xl relative" data-aos="zoom-in">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-600 to-gold-500 text-emerald-950 px-6 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
-                        <i class="fas fa-glass-cheers"></i> Resepsi Pernikahan
+                <div class="max-w-2xl mx-auto royal-glass rounded-3xl p-8 md:p-12 border border-gold-500/50 shadow-2xl relative" data-aos="zoom-in">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600 text-emerald-950 px-8 py-2.5 rounded-full font-cinzel font-bold text-xs tracking-widest shadow-xl flex items-center gap-2">
+                        <i class="fas fa-glass-cheers"></i> RESEPSI PERNIKAHAN
                     </div>
 
                     <div class="text-center space-y-6 mt-4">
@@ -274,19 +312,19 @@
                             <span class="text-base md:text-lg">13.30 WITA s.d. Selesai</span>
                         </div>
 
-                        <hr class="border-gold-500/20 my-6">
+                        <hr class="border-gold-500/30 my-6">
 
                         <div class="space-y-2">
                             <i class="fas fa-map-marker-alt text-2xl text-gold-500 mb-1"></i>
-                            <h4 class="font-bold text-lg text-gold-300">Kediaman Mempelai</h4>
+                            <h4 class="font-bold text-lg text-gold-300 font-cinzel">Kediaman Mempelai</h4>
                             <p class="text-sm text-gold-100/80 max-w-md mx-auto leading-relaxed">Jl. Labora Lingkungan Teppo</p>
                         </div>
 
                         <div class="flex flex-wrap justify-center gap-4 pt-6">
-                            <a href="https://maps.google.com/?q=Jl.+Labora+Lingkungan+Teppo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-800 hover:bg-emerald-700 text-gold-300 border border-gold-500/40 text-sm font-medium transition duration-300">
+                            <a href="https://maps.google.com/?q=Jl.+Labora+Lingkungan+Teppo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-900 hover:bg-emerald-800 text-gold-300 border border-gold-500/50 text-xs font-semibold transition duration-300 shadow-lg">
                                 <i class="fas fa-map-marked-alt text-gold-500"></i> Buka Google Maps
                             </a>
-                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Jasri+%26+Ainun&dates=20261108T053000Z/20261108T100000Z&details=Resepsi+Pernikahan+Jasri+Yusuf+%26+Ainun+Wafiyah+Ashar&location=Jl.+Labora+Lingkungan+Teppo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-500 hover:bg-gold-600 text-emerald-950 text-sm font-bold transition duration-300">
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Jasri+%26+Ainun&dates=20261108T053000Z/20261108T100000Z&details=Resepsi+Pernikahan+Jasri+Yusuf+%26+Ainun+Wafiyah+Ashar&location=Jl.+Labora+Lingkungan+Teppo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-gold-600 to-gold-400 text-emerald-950 text-xs font-bold transition duration-300 shadow-lg">
                                 <i class="far fa-calendar-plus"></i> Simpan Tanggal
                             </a>
                         </div>
@@ -296,15 +334,15 @@
         </section>
 
         <!-- GALERI FOTO & VIDEO -->
-        <section id="galeri" class="py-20 px-4 relative z-10 max-w-6xl mx-auto">
+        <section id="galeri" class="py-24 px-4 relative z-10 max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <p class="text-xs uppercase tracking-widest text-gold-300 mb-2">Momen Bahagia</p>
+                <p class="font-cinzel text-xs uppercase tracking-widest text-gold-300 mb-2">Momen Bahagia</p>
                 <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text">Galeri Prewedding</h2>
             </div>
 
             <!-- Video Player (HTML5 Video) -->
-            <div class="mb-12 glass rounded-3xl p-4 md:p-6 border border-gold-500/40 max-w-3xl mx-auto shadow-2xl" data-aos="zoom-in">
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-gold-500/30 bg-black flex items-center justify-center">
+            <div class="mb-12 royal-glass rounded-3xl p-4 md:p-6 border border-gold-500/50 max-w-3xl mx-auto shadow-2xl" data-aos="zoom-in">
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-gold-500/40 bg-black flex items-center justify-center">
                     <video class="w-full h-full object-cover" controls preload="metadata">
                         <source src="video-wedding.mp4" type="video/mp4">
                         Browser Anda tidak mendukung elemen video.
@@ -314,53 +352,59 @@
             </div>
 
             <!-- Photo Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="glass overflow-hidden rounded-2xl border border-gold-500/20 group h-64" data-aos="fade-up">
-                    <img src="foto1.jpg" alt="Momen 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="royal-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up">
+                    <div class="w-full h-full rounded-xl overflow-hidden">
+                        <img src="foto1.jpg" alt="Momen 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
                 </div>
-                <div class="glass overflow-hidden rounded-2xl border border-gold-500/20 group h-64" data-aos="fade-up" data-aos-delay="100">
-                    <img src="wanita.jpg" alt="Momen 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="royal-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-full h-full rounded-xl overflow-hidden">
+                        <img src="wanita.jpg" alt="Momen 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
                 </div>
-                <div class="glass overflow-hidden rounded-2xl border border-gold-500/20 group h-64" data-aos="fade-up" data-aos-delay="200">
-                    <img src="pria.jpg" alt="Momen 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="royal-glass overflow-hidden rounded-2xl border border-gold-500/30 group h-72 p-2 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-full h-full rounded-xl overflow-hidden">
+                        <img src="pria.jpg" alt="Momen 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- AMPLOP DIGITAL -->
-        <section id="amplop" class="py-20 px-4 relative z-10 bg-emerald-950/60 border-t border-gold-500/20">
+        <section id="amplop" class="py-24 px-4 relative z-10 bg-emerald-950/80 border-t border-gold-500/30">
             <div class="max-w-3xl mx-auto text-center">
                 <div class="mb-12" data-aos="fade-up">
                     <i class="fas fa-gift text-gold-500 text-3xl mb-3"></i>
                     <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text mb-3">Amplop Digital</h2>
-                    <p class="text-sm text-gold-100/80 max-w-md mx-auto">
+                    <p class="text-sm text-gold-100/80 max-w-md mx-auto leading-relaxed">
                         Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberi hadiah, kami menyediakan Amplop Digital di bawah ini:
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="zoom-in">
-                    <div class="glass p-6 rounded-2xl border border-gold-500/30 relative">
+                    <div class="royal-glass p-6 rounded-2xl border border-gold-500/40 relative">
                         <div class="flex justify-between items-center mb-4">
-                            <span class="font-bold text-lg text-gold-300">Bank BRI</span>
+                            <span class="font-bold text-lg text-gold-300 font-cinzel">Bank BRI</span>
                             <i class="fas fa-university text-gold-500 text-xl"></i>
                         </div>
                         <p class="text-left text-xs text-gold-100/60 mb-1">Nomor Rekening:</p>
                         <p class="text-left font-mono text-xl font-bold text-white mb-2">004701059543506</p>
                         <p class="text-left text-xs text-gold-200/80 mb-6">a.n. Jasri Yusuf</p>
-                        <button onclick="copyToClipboard('004701059543506', 'BRI')" class="w-full py-2.5 rounded-xl bg-gold-500/20 hover:bg-gold-500/30 border border-gold-500/50 text-gold-300 text-xs font-semibold transition flex items-center justify-center gap-2">
+                        <button onclick="copyToClipboard('004701059543506', 'BRI')" class="w-full py-3 rounded-xl bg-gold-500/20 hover:bg-gold-500/30 border border-gold-500/50 text-gold-300 text-xs font-semibold transition flex items-center justify-center gap-2">
                             <i class="far fa-copy"></i> Salin Rekening BRI
                         </button>
                     </div>
 
-                    <div class="glass p-6 rounded-2xl border border-gold-500/30 relative">
+                    <div class="royal-glass p-6 rounded-2xl border border-gold-500/40 relative">
                         <div class="flex justify-between items-center mb-4">
-                            <span class="font-bold text-lg text-gold-300">Bank BCA</span>
+                            <span class="font-bold text-lg text-gold-300 font-cinzel">Bank BCA</span>
                             <i class="fas fa-university text-gold-500 text-xl"></i>
                         </div>
                         <p class="text-left text-xs text-gold-100/60 mb-1">Nomor Rekening:</p>
                         <p class="text-left font-mono text-xl font-bold text-white mb-2">9876543210</p>
                         <p class="text-left text-xs text-gold-200/80 mb-6">a.n. Ainun Wafiyah Ashar</p>
-                        <button onclick="copyToClipboard('9876543210', 'BCA')" class="w-full py-2.5 rounded-xl bg-gold-500/20 hover:bg-gold-500/30 border border-gold-500/50 text-gold-300 text-xs font-semibold transition flex items-center justify-center gap-2">
+                        <button onclick="copyToClipboard('9876543210', 'BCA')" class="w-full py-3 rounded-xl bg-gold-500/20 hover:bg-gold-500/30 border border-gold-500/50 text-gold-300 text-xs font-semibold transition flex items-center justify-center gap-2">
                             <i class="far fa-copy"></i> Salin Rekening BCA
                         </button>
                     </div>
@@ -369,22 +413,22 @@
         </section>
 
         <!-- UCAPAN & DOA -->
-        <section id="guestbook" class="py-20 px-4 relative z-10 max-w-4xl mx-auto">
+        <section id="guestbook" class="py-24 px-4 relative z-10 max-w-4xl mx-auto">
             <div class="text-center mb-12" data-aos="fade-up">
                 <i class="fas fa-comments text-gold-500 text-3xl mb-3"></i>
                 <h2 class="font-serif text-3xl md:text-5xl font-semibold gold-gradient-text mb-2">Ucapan & Doa</h2>
                 <p class="text-sm text-gold-100/70">Berikan ucapan terbaik Anda untuk kedua mempelai</p>
             </div>
 
-            <div class="glass p-6 md:p-8 rounded-3xl border border-gold-500/30 shadow-2xl mb-10" data-aos="fade-up">
+            <div class="royal-glass p-6 md:p-8 rounded-3xl border border-gold-500/40 shadow-2xl mb-10" data-aos="fade-up">
                 <form id="rsvp-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
                     <div>
                         <label for="form-name" class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Nama Anda</label>
-                        <input type="text" id="form-name" required placeholder="Masukkan Nama Lengkap" class="w-full bg-emerald-950/60 border border-gold-500/30 rounded-xl p-3 text-gold-100 focus:outline-none focus:border-gold-500 text-sm">
+                        <input type="text" id="form-name" required placeholder="Masukkan Nama Lengkap" class="w-full bg-emerald-950/80 border border-gold-500/40 rounded-xl p-3.5 text-gold-100 focus:outline-none focus:border-gold-500 text-sm">
                     </div>
                     <div>
                         <label for="form-attendance" class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Konfirmasi Kehadiran</label>
-                        <select id="form-attendance" class="w-full bg-emerald-950/60 border border-gold-500/30 rounded-xl p-3 text-gold-100 focus:outline-none focus:border-gold-500 text-sm">
+                        <select id="form-attendance" class="w-full bg-emerald-950/80 border border-gold-500/40 rounded-xl p-3.5 text-gold-100 focus:outline-none focus:border-gold-500 text-sm">
                             <option value="Hadir">Hadir</option>
                             <option value="Tidak Hadir">Tidak Hadir</option>
                             <option value="Ragu-ragu">Masih Ragu-ragu</option>
@@ -392,10 +436,10 @@
                     </div>
                     <div>
                         <label for="form-message" class="block text-xs uppercase tracking-wider text-gold-300 mb-2">Ucapan & Doa</label>
-                        <textarea id="form-message" rows="4" required placeholder="Tuliskan pesan dan doa restu..." class="w-full bg-emerald-950/60 border border-gold-500/30 rounded-xl p-3 text-gold-100 focus:outline-none focus:border-gold-500 text-sm"></textarea>
+                        <textarea id="form-message" rows="4" required placeholder="Tuliskan pesan dan doa restu..." class="w-full bg-emerald-950/80 border border-gold-500/40 rounded-xl p-3.5 text-gold-100 focus:outline-none focus:border-gold-500 text-sm"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 text-emerald-950 font-bold shadow-lg hover:brightness-110 transition">
-                        <i class="fas fa-paper-plane mr-2"></i> Kirim Ucapan
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 text-emerald-950 font-cinzel font-bold shadow-lg hover:brightness-110 transition tracking-widest text-xs">
+                        <i class="fas fa-paper-plane mr-2"></i> KIRIM UCAPAN
                     </button>
                 </form>
             </div>
@@ -407,13 +451,13 @@
         <footer class="py-12 px-4 text-center border-t border-gold-500/20 relative z-10 bg-emerald-950">
             <h3 class="font-script text-4xl gold-gradient-text mb-2">Jasri & Ainun</h3>
             <p class="text-xs text-gold-100/60 mb-6">Terima Kasih Atas Doa & Restu Anda</p>
-            <p class="text-[10px] text-gold-300/40">Digital Wedding Invitation &copy; 2026. All Rights Reserved.</p>
+            <p class="text-[10px] text-gold-300/40 font-cinzel">Digital Wedding Invitation &copy; 2026. All Rights Reserved.</p>
         </footer>
 
     </main>
 
     <!-- MOBILE BOTTOM NAVIGATION -->
-    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass border-t border-gold-500/30 px-4 py-2 flex justify-around items-center text-gold-300">
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 royal-glass border-t border-gold-500/40 px-4 py-2.5 flex justify-around items-center text-gold-300">
         <a href="#home" class="flex flex-col items-center gap-1 text-[10px]"><i class="fas fa-home text-base"></i><span>Home</span></a>
         <a href="#mempelai" class="flex flex-col items-center gap-1 text-[10px]"><i class="fas fa-user-friends text-base"></i><span>Mempelai</span></a>
         <a href="#acara" class="flex flex-col items-center gap-1 text-[10px]"><i class="fas fa-calendar-alt text-base"></i><span>Acara</span></a>
@@ -423,7 +467,7 @@
     </nav>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed top-6 right-6 z-50 glass border border-gold-500 text-gold-300 px-6 py-3 rounded-2xl shadow-2xl hidden transition duration-300 flex items-center gap-3">
+    <div id="toast" class="fixed top-6 right-6 z-50 royal-glass border border-gold-500 text-gold-300 px-6 py-3 rounded-2xl shadow-2xl hidden transition duration-300 flex items-center gap-3">
         <i class="fas fa-check-circle text-gold-500 text-lg"></i>
         <span id="toast-message" class="text-xs font-medium">Nomor rekening berhasil disalin!</span>
     </div>
@@ -440,32 +484,37 @@
             document.getElementById('guest-name').innerText = guestName;
         }
 
-        // AKSI MEMBUKA GERBANG PKD IPDN
+        // AKSI MEMBUKA GERBANG PKD IPDN MEWAH
         function openGate() {
             const gateLeft = document.getElementById('gate-left');
             const gateRight = document.getElementById('gate-right');
             const gateContent = document.getElementById('gate-content');
             const gateWrapper = document.getElementById('gate-wrapper');
+            const lightBeam = document.getElementById('light-beam');
             const mainContent = document.getElementById('main-content');
             const musicBtn = document.getElementById('music-control');
 
-            // 1. Hilangkan kartu ucapan di tengah terlebih dahulu
+            // 1. Pendaran Sinar Cahaya
+            lightBeam.classList.remove('opacity-0');
+            lightBeam.classList.add('opacity-100');
+
+            // 2. Hilangkan Kartu Sambutan
             gateContent.classList.add('scale-75', 'opacity-0');
 
-            // 2. Buka kedua pintu gerbang ke arah samping
+            // 3. Buka Pintu Gerbang Kiri & Kanan (Efek 3D)
             setTimeout(() => {
                 gateLeft.classList.add('gate-open-left');
                 gateRight.classList.add('gate-open-right');
                 mainContent.classList.remove('opacity-0');
                 musicBtn.classList.remove('hidden');
                 playMusic();
-            }, 300);
+            }, 400);
 
-            // 3. Sembunyikan pembungkus gerbang sepenuhnya
+            // 4. Sembunyikan Gerbang Setelah Terbuka Sempurna
             setTimeout(() => {
                 gateWrapper.style.display = 'none';
                 AOS.refresh();
-            }, 1800);
+            }, 2200);
         }
 
         const audio = document.getElementById('bg-music');
@@ -563,10 +612,10 @@
                     : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
 
                 const card = document.createElement('div');
-                card.className = 'glass p-4 rounded-2xl border border-gold-500/20 text-left space-y-2';
+                card.className = 'royal-glass p-4 rounded-2xl border border-gold-500/30 text-left space-y-2';
                 card.innerHTML = `
                     <div class="flex justify-between items-center">
-                        <h4 class="font-bold text-gold-300 text-sm">${escapeHtml(item.name)}</h4>
+                        <h4 class="font-bold text-gold-300 text-sm font-cinzel">${escapeHtml(item.name)}</h4>
                         <span class="text-[10px] px-2.5 py-0.5 rounded-full border ${badgeColor}">${escapeHtml(item.attendance)}</span>
                     </div>
                     <p class="text-xs text-gold-100/90 leading-relaxed">${escapeHtml(item.message)}</p>
